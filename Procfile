@@ -1,2 +1,2 @@
-web: dotnet ./dotnet-core-app1/dotnetcoreapp1.dll
-web2: dotnet ./dotnet-core-app2/dotnetcoreapp2.dll
+web: dotnet ./bin/Release/netcoreapp3.1/linux-x64/PikTok.dll
+web2: dotnet ./bin/Release/netcoreapp3.1/linux-x64/PikTok.Views.dll
