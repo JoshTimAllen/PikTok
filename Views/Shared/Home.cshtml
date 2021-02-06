@@ -1,0 +1,23 @@
+﻿@inject PikTok.Services.PostService postService
+@inject Microsoft.JSInterop.IJSRuntime JSRuntime
+@model PikTok.Models.HomeViewModel
+@using Microsoft.AspNetCore.Components.Web
+@using PikTok.Components
+@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<div class="CardsContainer bg-gray-50 dark:bg-black flex flex-col items-stretch justify-center">
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        GetHomePosts();
+        window.onscroll = function (ev) {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                //GetHomePosts();
+            }
+        };
+    }, false);
+</script>

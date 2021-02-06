@@ -1,0 +1,52 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+        <title>@ViewData["Title"] -  </title>         
+        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@1.6.0/dist/tailwind.min.css"> 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akronim&display=swap"> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap"> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Atomic+Age&display=swap"> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&display=swap"> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bai+Jamjuree&display=swap"> 
+        <link rel="stylesheet" href="~/slick/slick.css"/> 
+        <link rel="stylesheet" href="~/slick/slick-theme.css"/> 
+        <link rel="stylesheet" href="~/css/site.css"/> 
+    </head>     
+    <body class="bg-gray-300"> 
+        @using PikTok.Components
+        @using PikTok.Models
+        @using PikTok.Services
+        @using Microsoft.AspNetCore.Components.Web
+        @inject AuthService authService
+        @{
+        }
+        <header class="border-gray-800"> 
+            <div class="bg-yellow-500 flex flex-row items-center justify-between p-1 shadow-xs"> 
+                <div class="flex flex-row items-center justify-around min-w-full mr-8 md:flex"> 
+                    <a class="px-5 text-gray-700 border-gray-900 text-3xl" data-pg-class-style="navlink"><span class="fa fa-home"></span></a> 
+                    <a class="px-5 text-gray-700 border-gray-900 text-3xl" data-pg-class-style="navlink"><span class="fa-envelope-open far"></span></a> 
+                    <a class="px-5 text-gray-700 border-gray-900 text-3xl" data-pg-class-style="navlink"><span class="far fa-heart"></span></a> 
+                    <a class="px-5 text-gray-700 border-gray-900 text-3xl" data-pg-class-style="navlink"><img src="@Model.userAccount.profile.ProfilePicture.url" class="fa-user fas h-10" style="border-radius: 50%; margin-top: -5px;" alt=""/></a> 
+                </div>                 
+            </div>             
+        </header>
+        <div class="container"> 
+            <main role="main"> 
+                <!-- component -->
+                @RenderBody()
+            </main>             
+        </div>         
+        <script src="~/lib/jquery/dist/jquery.js"></script>         
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>         
+        <script src="~/js/site.js" asp-append-version="true"></script>         
+        <script src="~/js/websocket.js" asp-append-version="true"></script>         
+        <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>         
+        <script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>         
+        <script type="text/javascript" src="~/slick/slick.js"></script>         
+        @RenderSection("Scripts", required: false)
+    </body>     
+</html>

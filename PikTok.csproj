@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Login.cshtml" />
+    <Content Remove="wwwroot\data\Index.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Login.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Login.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="MongoDB.Driver" Version="2.11.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+    <PackageReference Include="WebSocketSharp.NetCore" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\CTA\" />
+    <Folder Include="Views\Signup\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\slick\config.rb" />
+    <None Include="wwwroot\slick\fonts\slick.svg" />
+    <None Include="wwwroot\slick\slick-theme.less" />
+    <None Include="wwwroot\slick\slick-theme.scss" />
+    <None Include="wwwroot\slick\slick.js" />
+    <None Include="wwwroot\slick\slick.less" />
+    <None Include="wwwroot\slick\slick.min.js" />
+    <None Include="wwwroot\slick\slick.scss" />
+  </ItemGroup>
+
+</Project>
